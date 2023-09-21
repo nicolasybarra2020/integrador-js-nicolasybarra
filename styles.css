@@ -1,0 +1,351 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+.container{
+    padding: 1rem 0;
+    padding-top: 100px;
+    width: 90%;
+    margin: auto;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 227, 174,0.4);
+    z-index: 3;
+    
+}
+
+.title{
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Tilt Prism', cursive;
+    color: rgb(255, 187, 0);
+    font-size: 26px;
+ 
+}
+.nav{
+    /* background-color: red; */
+    width: 500px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{color: white;}
+.nav a:hover{color: yellowgreen;}
+#menu-id{
+    display: none;
+    width: 10px;
+    height: 10px;
+}
+
+/* Hero */
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
+.hero .text{
+    width: 40%;
+    line-height: 35px;
+    text-align: center;
+    font-size: 24px;
+}
+p.pokedinos{
+    font-weight: 700;
+    display: inline;
+}
+.hero .text i{cursor: pointer;color: yellow;}
+.hero .text i:hover{color: yellowgreen;}
+
+
+@keyframes heroAnimation{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.hero .images{
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+.images img{position: absolute;width: 100%;height: 100%;}
+
+.img4{
+    animation: heroAnimation 20s 0s infinite;
+}
+.img3{
+    animation: heroAnimation 20s 5s infinite;
+}
+.img2{
+    animation: heroAnimation 20s 10s infinite;
+}
+.img1{
+    animation: heroAnimation 20s 15s infinite;
+}
+
+
+/* About us */
+
+.about-us{
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Products section */
+
+.products-section{
+    background-image: linear-gradient(-20deg, rgba(43, 88, 118,0.5) 0%, rgba(78, 67, 118,0.5) 100%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 0;
+    gap: 3rem;
+}
+
+.product-btn{
+    background: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-btn:hover{color:rgba(217, 255, 0,1);}
+.active{background-color: rgba(79, 229, 4, 0.6);}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+}
+
+
+/* @keyframes shine {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+} */
+
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    height: 350px;
+    border: 2px solid white;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
+    animation: shine 3s infinite; 
+    color: black;
+    cursor: pointer;
+}
+
+.buy-bg{
+    display: none;
+    width: 0%;
+    height: 0%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card:hover > div.buy-bg{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(179, 255, 0, 0.2);
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Tilt Prism', cursive;
+    color: rgb(255, 253, 253);
+    font-size: 52px;
+}
+
+
+.card-image{
+    width: 70%;
+    height: 50%;
+    border: 2px solid black;
+}
+
+.card-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 7px;
+    padding: 0 1rem;
+}
+.card-description{
+    font-size: 8px;
+    /* background-color: rgba(7, 157, 122, 0.7); */
+}
+
+.card-title,.card-price,.card-period p:first-child,.card-diet > p{
+    color: rgb(12, 110, 77);
+    font-weight: 400;
+
+}
+.card-price{
+    font-size:20px;
+    color: yellow;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Tilt Prism', cursive;
+    filter: brightness(190%);
+}
+
+.card-period p:first-child,.card-diet > p{
+    font-size: 9px;
+}
+.card-diet div{display: flex;}
+
+
+/* Show more btn */
+
+.showmore-btn{
+    background: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.showmore-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+/* buycart */
+.buy-cart{
+    z-index: 10;
+}
+
+/* OVERLAY */
+
+.overlay{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding:100px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100vh; */
+    backdrop-filter: blur(8px); 
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    color: black;
+    transform: translateX(-100%);
+    transition: transform 1s;
+}
+
+.move-overlay{
+    transform: translateX(0);
+}
+
+.buycart-card{
+    width: 80%;
+    height:150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    gap: 5px;
+    border: 2px solid orange;
+    font-size: 13px;
+}
+.cart-wrap{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.buycart-button{
+    display: inline;
+    border: 1px solid blue;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.buycart-button:hover{
+    background-color: rgba(0, 0, 255,0.6);
+    color: white;
+}
+.buycart-card img{
+    width: 200px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid green;
+}
+
+.overlay-products{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

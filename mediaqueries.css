@@ -1,0 +1,97 @@
+@media (max-width:1200px) {
+    .hero{
+        height: 80vh;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .hero .images{
+        width: 80%;
+        /* height: 100%; */
+        
+    }
+    .hero .text{
+        width: 80%;
+    }
+
+
+    .about-us{
+        width: 80%;
+    }
+}
+
+@media (max-width:830px){
+    .nav{
+        
+        width: auto;
+        max-width: 500px;
+        gap: 4rem; 
+    }
+    .products{
+        gap: 0.5rem;
+    }
+    .card{
+        width: 30%;
+    }
+}
+@media (max-width:650px){
+    .nav{
+        font-size: 14px; 
+        max-width: 500px;
+        gap: 3rem; 
+    }
+    .products{
+        gap: 0.5rem;
+    }
+    .card{
+        width:45%;
+    }
+    .product-btn{
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:460px){
+    .product-btn{
+        padding: 0.5rem 0.7rem;
+        font-size: 0.7rem;
+    }
+}
+@media (max-width:360px){
+
+    .hero{
+        height: 100vh;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .hero .images{
+        width: 80%;
+        height: 50%; 
+        
+    }
+    .hero .text{
+        font-size: 14px;
+        line-height: 25px;
+        width: 100%;
+    }
+
+
+    .about-us{
+        width: 80%;
+    }
+
+
+
+
+    .products{
+        gap: 2rem;
+    }
+    .card{
+        width: 85%;
+        /* height: 250px; */
+    }
+    .product-btn{
+        padding: 0.5rem 0.5rem;
+        font-size: 0.6rem;
+    }
+
+}
